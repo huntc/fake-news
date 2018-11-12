@@ -9,8 +9,10 @@ lazy val `fake-news` =
     .settings(settings)
     .settings(
       libraryDependencies ++= Seq(
-        library.scalaCheck % Test,
-        library.utest      % Test
+        library.akkaStreamTyped,
+        library.akkaActorTestkitTyped % Test,
+        library.scalaCheck            % Test,
+        library.utest                 % Test
       )
     )
 
@@ -21,11 +23,15 @@ lazy val `fake-news` =
 lazy val library =
   new {
     object Version {
+      val akka       = "2.5.18"
       val scalaCheck = "1.14.0"
       val utest      = "0.6.6"
     }
-    val scalaCheck = "org.scalacheck" %% "scalacheck" % Version.scalaCheck
-    val utest      = "com.lihaoyi"    %% "utest"      % Version.utest
+    val akkaActorTestkitTyped = "com.typesafe.akka" %% "akka-actor-testkit-typed" % Version.akka
+    val akkaStreamTyped =       "com.typesafe.akka" %% "akka-stream-typed"        % Version.akka
+
+    val scalaCheck    = "org.scalacheck" %% "scalacheck"      % Version.scalaCheck
+    val utest         = "com.lihaoyi"    %% "utest"           % Version.utest
   }
 
 // *****************************************************************************

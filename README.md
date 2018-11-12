@@ -1,6 +1,28 @@
 # fake-news #
 
-Welcome to fake-news!
+Welcome to fake-news! Fake news provides a means of modelling and simulating a system using
+Akka Typed actors and Akka Streams.
+
+## What are we modelling?
+
+The following diagram shows what we are modelling. On the left we have the simplest of client/server
+scenario. On the right, we have a typical architecture that permits greater scale:
+
+![Image of Solutions](Reactive Arch.png)
+
+## How do we express the model?
+
+The system model is expressed as streams and actors. You can express anything you want in terms of 
+behaviour.
+
+## How do we run the model?
+
+The model is run by having the program provide each actor with a time in relation to the start of 
+the system. Actors can transition to a behaviour in relation to where they are in simulation time.
+
+## How do we visualise the results?
+
+Open Tracing is intended to be used to capture the results. This remains an exercise for the reader.
 
 ## Contribution policy ##
 
