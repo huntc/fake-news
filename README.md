@@ -8,7 +8,7 @@ Akka Typed actors and Akka Streams.
 The following diagram shows what we are modelling. On the left we have the simplest of client/server
 scenario. On the right, we have a typical architecture that permits greater scale:
 
-![Image of Solutions](Reactive Arch.png)
+![Image of Solutions](/Reactive%20Arch.png)
 
 ## How do we express the model?
 
